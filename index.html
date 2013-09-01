@@ -73,12 +73,10 @@
 				]
 			});
 			Reveal.addEventListener('slidechanged', function(event){
-				console.log('slidechanged');
 				if (event.currentSlide.parentElement.classList.contains('stack')){
 					var stack = event.currentSlide.parentElement;
 					if (!stack.dataset.iframesLoaded){
 						var innerIframes = stack.querySelectorAll('iframe');
-						console.log('%s iframes found', innerIframes.length);
 						for (var i = 0; i < innerIframes.length; i++){
 							var url = innerIframes[i].getAttribute('src');
 							innerIframes[i].setAttribute('src', url);
