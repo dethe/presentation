@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Mondrian Example</title>
+	<style>
+		/* get a more naturual box sizing where width and height includes padding and borders */
+		*, *:before, *:after {
+  			-moz-box-sizing: border-box; 
+  			-webkit-box-sizing: border-box; 
+  			box-sizing: border-box;
+ 		}
+
+		.background{
+			width: 889px;
+			height: 600px;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+		.blue{
+			background-color: #f50c0e;
+		}
+		.red{
+			background-color: #f50c0e;
+		}
+		.black{
+			background-color: #000000;
+		}
+		.yellow{
+			background-color: #fae317;
+		}
+		.white{
+			background-color: #f3f3f3;
+		}
+		div{
+			border: 8px solid #000;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="background"></div>
+	<script>
+
+		var background = document.querySelector('.background');
+
+		function randint(start, stop){
+		    // return an integer between start and stop, inclusive
+		    if (stop === undefined){
+		        stop = start;
+		        start = 0;
+		    }
+		    var factor = stop - start + 1;
+		    return Math.floor(Math.random() * factor) + start;
+		}
+
+		function randColor(){
+			return colors[randint(colors.length-1)];
+		}
+
+		function randSquare(){
+			var square = document.createElement('div');
+			background.appendChild(square);
+			square.style.left = randint(10) * 3 * dx + 'px';
+			square.style.top = randint(8) * 3 * dy + 'px';
+			square.style.width = randint(3,6) * dx + 'px';
+			square.style.height = randint(3,6) * dy + 'px';
+			square.style.backgroundColor = randColor();
+		}
+
+		// grid is 32 columns of 25 pixels
+		var dx = 25; 
+		var maxX = 31;
+		// grid is 24 rows of 25 pixels
+		var dy = 25;
+		var maxY = 23;
+
+		var colors = [
+			'#f50c0e',
+			'#f50c0e',
+			'#000000',
+			'#fae317',
+			'#f3f3f3'
+		];
+
+		for (var i = 0; i < 50; i++){
+			randSquare();
+		}
+	</script>
+</body>
+</html>

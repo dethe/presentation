@@ -76,3 +76,38 @@ Third: Canvas
 <iframe width="100%" height="300" src="http://jsfiddle.net/dethe/JvVrs/embedded/result,html,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 Like the `svg` tag, the `canvas` tag is only there to define an area to draw into, but this time we draw using Javascript rather than tags. And there is more setup to do, getting a context. Why would we go to more effort for the same result?
+
+
+
+## Wait! Wut?
+
+
+Where did `<svg>` come from? That's like no HTML I've ever seen.
+
+
+SVG is the Scalable Vector Graphics markup language. It is similar to HTML in some ways, but has its own conventions for a lot of things. It can be used for drawing basic (and not so basic shapes) using colors, gradients, random noise, images, filters, and much more. It also has conventions for animation, for flowing text along an arbitrary path, etc.
+
+
+As of HTML5, SVG *is* part of HTML and can be included on a page directly. MathML is also part of HTML5, if you need to include complex equations in your work.
+
+
+
+## So which is it then? What should I use?
+
+
+Like in so many things, the answer is, "it depends." If you want a complex, but fairly static, image that scales to any size without losing resolution, SVG is your friend. If you want to draw lots of things that change 30 (or more) times a second, you're probably going to want to use the canvas. HTML + CSS is handy, but going much beyond basic rectangles you're going to want to use something better suited for drawing.
+
+
+We will come back to HTML + CSS for other tasks: video, audio, forms and good old-fashioned text.
+
+And later we'll see another use of the Canvas. The 2D context is not the only possibility.
+
+
+
+## Credits
+
+Reveal.js presentation tool by Hakim El Hattab: https://github.com/hakimel/reveal.js
+
+Markdown format originally by John Gruber: http://daringfireball.net/projects/markdown/
+
+
