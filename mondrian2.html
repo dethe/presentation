@@ -68,7 +68,7 @@
 			square.style.top = y - (y % dy) + 'px';
 			square.style.width = randint(3,6) * dx + 'px';
 			square.style.height = randint(3,6) * dy + 'px';
-			square.style.backgroundColor = randColor();
+			square.className = randColor();
 		}
 
 		// grid is 16 columns of 50 pixels
@@ -77,11 +77,11 @@
 		var dy = 50;
 
 		var colors = [
-			'#f50c0e',
-			'#027cc1',
-			'#000000',
-			'#fae317',
-			'#f3f3f3'
+			'blue',
+			'red',
+			'black',
+			'yellow',
+			'white'
 		];
 
 		document.onclick = function(event){

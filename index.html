@@ -36,7 +36,8 @@
 				var slides = document.querySelector('.slides');
 				var section = document.createElement('section');
 				var args = getArguments();
-				var markdownsrc = args['mdsrc'] || 'teaching_web.md';
+				console.log('mdsrc: ' + args['mdsrc']);
+				var markdownsrc = (args['mdsrc'] || 'index') + '.md';
 				document.title = args['title'] || 'The Web as a Medium of Expression';
 				section.dataset.markdown = markdownsrc;
 				section.dataset.separator = '^\n\n\n';
