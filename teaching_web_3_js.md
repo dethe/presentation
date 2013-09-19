@@ -9,7 +9,7 @@
 # Week 3: JavaScript
 
 
-So far we have have 10,000 meter overviews of HTML and CSS. This week we're going to start looking at giving our sites behaviour over time and interactivity with users using JavaScript.
+So far we have had 10,000 meter overviews of HTML and CSS. This week we're going to start looking at giving our sites behaviour over time and interactivity with users using JavaScript.
 
 We're going to introduce two main concepts: the Document Object Model and events. Next week we will dive into Javascript in more depth
 
@@ -42,7 +42,6 @@ Again, you will need to access the parent element that you are removing from, as
 var elementToRemove = document.querySelector('.green');
 elementToRemove.parentElement.removeChild(elementToRemove);
 ```
-
 
 
 ## Changing attributes
@@ -96,23 +95,40 @@ Common events of interest can be mouse clicks, mouse movement, and keypresses. T
 
 ## Mouse clicks
 
-<a class="jsbin-embed" href="http://jsbin.com/iGIDAge/1/embed?output,js,html,css">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<iframe width="100%" height="300" src="http://jsbin.com/iGIDAge/1/embed?output,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 For the CSS I am using nth-child selectors which you can learn more about here: http://nthmaster.com/
+
 
 ## Mouse movement
 
 What can you find in this example that is new to you?
 
-<a class="jsbin-embed" href="http://jsbin.com/AmiLeVE/3/embed?output,js,html,css">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<iframe width="100%" height="300" src="http://jsbin.com/AmiLeVE/3/embed?output,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 
 ## Keypresses
 
-<a class="jsbin-embed" href="http://jsbin.com/EcEyUBU/4/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<iframe width="100%" height="300" src="http://jsbin.com/EcEyUBU/15/embed?output,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 Ask me about `switch` statements.
 
+
 ## Timing
+
+There are actually three different ways to have your JavaScript called periodically. Two have been in browsers for years, the other is newer but very useful.
+
+* `setTimeout(function, delay)` will call your function after at least the specified delay (measured in milliseconds) has passed.
+* `setInterval(function, delay)` will continue to call your function over and over, delaying at least the specified delay between calls.
+* `requestAnimationFrame(function)` will call your function before each screen refresh.
+
+
+## Why a new timing function after all these years?
+
+* `requestAnimationFrame` will never be called faster than the screen refreshes and will also not be called when the browser window or tab is not in the foreground. This is so handy (and improves efficiency) that all browser vendors implemented it.
+
+<iframe width="100%" height="300" src="http://jsbin.com/UPuFeZo/1/embed?js,output
+" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 
@@ -123,14 +139,26 @@ For this week's exercise we're going to let you use images that you create using
 
 ## The `<img>` tag
 
+The first and most obvious is the `<img>` tag, used to show an image. You can also re-size the image by changing the width.
+
+<iframe width="100%" height="300" src="http://jsbin.com/ulibUDi/1/embed?html,output
+" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 
 ## The `background-image` style
+
+One image, many ways to view it
+
+<iframe width="100%" height="300" src="http://jsbin.com/umiSiwE/2/embed?output
+" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ## Making "sprites"
 
+When we put together the pieces we've learned, we can make some cool things.
 
-# More Inspiration
+<iframe width="100%" height="300" src="http://jsbin.com/aTeYuhI/1/embed?output
+" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-
+Sprite image by *tokka* from Open Game Art http://opengameart.org/content/2d-hero
 
