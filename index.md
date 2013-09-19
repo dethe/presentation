@@ -27,3 +27,9 @@ Assignment: [Web-based self-portrait](http://courses.ecuad.ca/mod/assign/view.ph
 # Week Two: Style(sheets)
 
 [Introduction to CSS](/presentation/?mdsrc=teaching_web_2_css)
+
+
+
+# Week Three: JavaScript
+
+[DOM and Events](/presentation/?mdsrc=teaching_web_3_js)
